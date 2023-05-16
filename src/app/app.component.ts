@@ -22,8 +22,16 @@ import { AngularFireDatabase } from '@angular/fire/compat/database';
 export class AppComponent {
 
   title = 'crud-angular';
-  constructor(public db: AngularFireDatabase) {
 
+  //DI DEPENDENCI INJECTION
+  constructor(public db: AngularFireDatabase){}
+  test(){
+    const objeto ={
+      nome: "Fulano",
+      idade: 14,
+      matricula: 123456789
+    }
+    this.db.object("teste").set(objeto).then(()=>console.log("dados salvos"));
   }
 
   ngOnInit() {
