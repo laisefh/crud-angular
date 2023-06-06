@@ -33,7 +33,7 @@ export class ContatoService {
       idade: contato.idade,
     });
   }
-  deleteContato(id: string) {
+  deleteContato(id: String) {
     this.contatoRef = this.db.object('list-contatos/' + id);
     this.contatoRef.remove();
   }

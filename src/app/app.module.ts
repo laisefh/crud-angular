@@ -11,6 +11,7 @@ import { ListContatoComponent } from './contato/list-contato/list-contato.compon
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import{ BrowserAnimationsModule} from '@angular/platform-browser/animations'
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 
@@ -33,7 +34,8 @@ import{ BrowserAnimationsModule} from '@angular/platform-browser/animations'
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxPaginationModule
   ],
 
   providers: [],
