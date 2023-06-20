@@ -1,0 +1,50 @@
+<div class="pt-3 pb-2 mb-3 border-bottom">
+  <h2 class="h2">Adicionar Cachorro</h2>
+
+</div>
+<form [formGroup]="cachorroForm" (ngSubmit)="submitForm()" novalidate>
+  <div class="row">
+    <div class="col-lg-6 col-md-8 col-sm-12">
+      <div class="row">
+        <div class="col-md-12 mb-3">
+          <label
+            [ngClass]="{'text-danger': nome?.touched && nome?.invalid}"
+            for="nome" class="form-label">Nome</label>
+          <input
+            [ngClass]="{'is-invalid': nome?.touched && nome?.invalid, 'is-valid': nome?.touched && nome?.valid}"
+            type="text" id="nome" class="form-control" formControlName="nome" required/>
+          <div class="invalid-feedback"><sup>*</sup>Nome obrigatório</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 mb-3">
+          <label
+            [ngClass]="{'text-danger': raca?.touched && raca?.invalid}"
+            for="raca" class="form-label">Raça</label>
+          <input
+            [ngClass]="{'is-invalid': raca?.touched && raca?.invalid, 'is-valid': raca?.touched && raca?.valid}"
+            type="text" id="raca" class="form-control" formControlName="raca" required/>
+          <div class="invalid-feedback"><sup>*</sup>Raça obrigatório</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 mb-3">
+          <label
+            [ngClass]="{'text-danger': idade?.touched && idade?.invalid}"
+            for="idade" class="form-label">Idade</label>
+          <input [ngClass]="{'is-invalid': idade?.touched && idade?.invalid, 'is-valid': idade?.touched && idade?.valid}"
+            type="number"
+            formControlName="idade"
+            class="form-control"
+            required/>
+          <div class="invalid-feedback"><sup>*</sup>Idade obrigatório</div>
+        </div>
+      </div>
+      <div class="form-group text-end">
+        <button type="button" class="btn btn-secondary mx-2" (click)="resetForm()">Limpar </button>
+        <button type="submit" class="btn btn-success mx-2" [disabled]="!cachorroForm.valid">Adicionar Cachorro</button>
+      </div>
+    </div>
+  </div>
+</form>
+

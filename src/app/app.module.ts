@@ -12,6 +12,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import{ BrowserAnimationsModule} from '@angular/platform-browser/animations'
 import { NgxPaginationModule } from 'ngx-pagination';
+import { ListCachorroComponent } from './cachorro/list-cachorro/list-cachorro.component';
+import { EditCachorroComponent } from './cachorro/edit-cachorro/edit-cachorro.component';
+import { AddCachorroComponent } from './cachorro/add-cachorro/add-cachorro.component';
 
 
 
@@ -23,7 +26,10 @@ import { NgxPaginationModule } from 'ngx-pagination';
     AppComponent,
     AddContatoComponent,
     EditContatoComponent,
-    ListContatoComponent
+    ListContatoComponent,
+    ListCachorroComponent,
+    EditCachorroComponent,
+    AddCachorroComponent
   ],
 
   imports: [

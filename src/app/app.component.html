@@ -1,61 +1,42 @@
 <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-
   <a class="navbar-brand px-3" routerLink="/list-contato">
-
-      Dashboard
-
+    Dashboard
   </a>
-
-  <button class="navbar-toggler d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu">
-
+  <button class="navbar-toggler d-md-none collapsed" type="button" data-bs-toggle="collapse"
+    data-bs-target="#sidebarMenu">
     <span class="navbar-toggler-icon"></span>
-
   </button>
-
 </header>
-
 <!-- Sidebar navigation -->
-
 <div class="container-fluid">
-
   <div class="row flex-nowrap">
-
     <nav id="sidebarMenu" class="col-md-2 d-md-block bg-dark sidebar collapse">
-
-        <ul class="nav flex-column min-vh-100">
-
-          <li class="nav-item">
-
-            <a class="nav-link" routerLink="/add-contato" routerLinkActive="active">
-
-              Adicionar Contato
-
-            </a>
-
-          </li>
-
-          <li class="nav-item">
-
-            <a class="nav-link active" routerLink="/list-contato" routerLinkActive="active">
-
-              Lista de Contatos
-
-            </a>
-
-          </li>
-
-        </ul>
-
+      <ul class="nav flex-column min-vh-100">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/add-contato" routerLinkActive="active">
+            Adicionar Contato
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/list-contato" routerLinkActive="active">
+            Lista de Contatos
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/add-cachorro" routerLinkActive="active">
+            Adicionar Cachorro
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/list-cachorro" routerLinkActive="active">
+            Lista de Cachorros
+          </a>
+        </li>
+      </ul>
     </nav>
-
     <!-- Main content -->
-
     <main class="col-md-10">
-
       <router-outlet></router-outlet>
-
     </main>
-
   </div>
-
 </div>
