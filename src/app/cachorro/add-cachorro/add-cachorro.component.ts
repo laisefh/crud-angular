@@ -1,4 +1,4 @@
-import { CachorroService } from './../../cachorro.cachorro/cachorro.service';
+import { CachorroService } from './../cachorro.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms'
 import { ToastrService } from 'ngx-toastr';
@@ -12,13 +12,13 @@ export class AddCachorroComponent implements OnInit{
   cachorroForm: FormGroup;
 
   constructor(
-    private CachorroService: CachorroService,
+    private cachorroService: CachorroService,
     private fb: FormBuilder,
     private toastr: ToastrService){
       this.cachorroForm = this.createForm();
     }
     ngOnInit(){
-      this.CachorroService.getCachorroList;
+      this.cachorroService.getCachorroList;
     }
 
     createForm(){
@@ -32,7 +32,7 @@ export class AddCachorroComponent implements OnInit{
       this.cachorroForm.reset();
     }
     submitForm(){
-      this.CachorroService.insertCachorro(this.cachorroForm.value);
+      this.cachorroService.insertCachorro(this.cachorroForm.value);
       this.toastr.success(
         this.cachorroForm.controls['nome']
 .value + " adicionado");

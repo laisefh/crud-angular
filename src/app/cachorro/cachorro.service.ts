@@ -6,17 +6,17 @@ import { AngularFireDatabase, AngularFireList, AngularFireObject } from '@angula
   providedIn: 'root'
 })
 export class CachorroService {
-  ListCachorrosRef: AngularFireList<Cachorro>;
+  listaCachorrosRef: AngularFireList<Cachorro>;
   cachorroRef: AngularFireObject<Cachorro>;
   constructor(private db: AngularFireDatabase) {
-    this.ListCachorrosRef = this.db.list('list-cachorros');
+    this.listaCachorrosRef = this.db.list('list-cachorros');
     this.cachorroRef = this.db.object('list-cachorros/' + 0);
   }
-  insertCachorro(Cachorro: Cachorro){
-    this.ListCachorrosRef.push({
-      nome: Cachorro.nome,
-      raca: Cachorro.raca,
-      idade: Cachorro.idade,
+  insertCachorro(cachorro: Cachorro){
+    this.listaCachorrosRef.push({
+      nome: cachorro.nome,
+      raca: cachorro.raca,
+      idade: cachorro.idade,
     });
   }
   getCachorroById(id: string):
@@ -25,13 +25,13 @@ export class CachorroService {
     return this.cachorroRef;
   }
   getCachorroList(): AngularFireList<Cachorro>{
-    return this.ListCachorrosRef;
+    return this.listaCachorrosRef;
   }
-  updateCachorro(Cachorro: Cachorro){
+  updateCachorro(cachorro: Cachorro){
     this.cachorroRef.update({
-      nome: Cachorro.nome,
-      raca: Cachorro.raca,
-      idade: Cachorro.idade,
+      nome: cachorro.nome,
+      raca: cachorro.raca,
+      idade: cachorro.idade,
     })
   }
   deleteCachorro(id: string){
