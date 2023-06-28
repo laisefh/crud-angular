@@ -22,3 +22,7 @@
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+.image2{
+  padding-left: 30%;
+}
